@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#6e5b3c"/>
+<circle cx="936" cy="176" r="144" fill="#f3c991" opacity=".88"/>
+<path d="M0 624 288 400 516 544 768 296 1200 560V800H0Z" fill="#fcfaf3" opacity=".18"/>
+<path d="M0 720 324 520 600 656 900 472 1200 624V800H0Z" fill="#0d2a22" opacity=".42"/>
+<text x="72" y="72" fill="#fcfaf3" font-family="Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="5">KKN DESA SIRNABAYA</text>
+<text x="72" y="704" fill="#fcfaf3" font-family="Georgia,serif" font-size="60" font-weight="700">DISKUSI</text>
+<text x="1116" y="744" text-anchor="end" fill="#fcfaf3" font-family="Arial,sans-serif" font-size="20">04</text>
+</svg>

@@ -1,0 +1,4557 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta name="theme-color" content="#173f32">
+
+  <meta
+    name="description"
+    content="Portal berita dan dokumentasi KKN Desa Sirnabaya 2026 Universitas Buana Perjuangan Karawang."
+  >
+
+  <title>KKN Desa Sirnabaya 2026 | UBP Karawang</title>
+
+  <link
+    rel="icon"
+    href="assets/img/logo-kkn-sirnabaya-2026.png"
+    type="image/png"
+  >
+
+  <style>
+    :root {
+      --green-950: #102c24;
+      --green-900: #173f32;
+      --green-800: #1d5040;
+      --green-700: #286650;
+      --green-600: #387c61;
+      --green-100: #dfece5;
+      --green-050: #eef5f1;
+
+      --cream: #f4f0e5;
+      --cream-light: #faf8f2;
+      --white: #ffffff;
+
+      --ink: #17201c;
+      --ink-soft: #506058;
+      --ink-muted: #758079;
+
+      --line: rgba(23, 63, 50, 0.14);
+      --line-dark: rgba(255, 255, 255, 0.13);
+
+      --shadow:
+        0 24px 70px rgba(20, 50, 40, 0.10);
+
+      --shadow-soft:
+        0 14px 35px rgba(20, 50, 40, 0.08);
+
+      --radius-small: 12px;
+      --radius-medium: 20px;
+      --radius-large: 30px;
+
+      --shell: 1180px;
+      --header-height: 78px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 30px);
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+
+      color: var(--ink);
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(84, 138, 104, 0.13),
+          transparent 32rem
+        ),
+        var(--cream-light);
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.is-menu-open,
+    body.is-article-open {
+      overflow: hidden;
+    }
+
+    img,
+    iframe,
+    video {
+      max-width: 100%;
+    }
+
+    img {
+      display: block;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      border: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 9999;
+      top: 12px;
+      left: 12px;
+
+      padding: 10px 15px;
+      border-radius: 10px;
+
+      color: var(--white);
+      background: var(--green-950);
+
+      transform: translateY(-150%);
+      transition: transform 180ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(56, 124, 97, 0.45);
+      outline-offset: 4px;
+    }
+
+    .shell {
+      width: min(
+        calc(100% - 40px),
+        var(--shell)
+      );
+
+      margin-inline: auto;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      min-height: 48px;
+      padding: 12px 20px;
+
+      border-radius: 999px;
+
+      font-weight: 750;
+      text-decoration: none;
+      cursor: pointer;
+
+      transition:
+        transform 180ms ease,
+        background 180ms ease,
+        color 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: var(--white);
+      background: var(--green-900);
+      box-shadow: 0 14px 30px rgba(23, 63, 50, 0.18);
+    }
+
+    .button-primary:hover {
+      background: var(--green-800);
+    }
+
+    .button-light {
+      color: var(--green-950);
+      background: var(--white);
+    }
+
+    .button-outline {
+      color: var(--green-900);
+      background: transparent;
+      border: 1px solid var(--line);
+    }
+
+    .button-outline:hover {
+      background: var(--green-050);
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      color: var(--green-800);
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .text-link span {
+      transition: transform 180ms ease;
+    }
+
+    .text-link:hover span {
+      transform: translateX(4px);
+    }
+
+    .eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+
+      margin: 0 0 15px;
+
+      color: var(--ink-muted);
+
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow span {
+      color: var(--green-700);
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1.04;
+      letter-spacing: -0.045em;
+      font-weight: 500;
+    }
+
+    .section-description {
+      max-width: 610px;
+      margin: 18px 0 0;
+
+      color: var(--ink-soft);
+      font-size: 1rem;
+    }
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    .site-header {
+      position: sticky;
+      z-index: 1000;
+      top: 0;
+
+      min-height: var(--header-height);
+
+      background: rgba(250, 248, 242, 0.88);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+
+      min-height: var(--header-height);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+
+      min-width: 0;
+
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .brand-logos {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .brand-logo {
+      display: block;
+      object-fit: contain;
+    }
+
+    .brand-logo-ubp {
+      width: 43px;
+      height: 43px;
+    }
+
+    .brand-logo-kkn {
+      width: 48px;
+      height: 48px;
+
+      margin-left: -5px;
+      padding: 3px;
+
+      border-radius: 50%;
+      background: var(--white);
+      box-shadow: 0 7px 18px rgba(23, 63, 50, 0.13);
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 1px;
+
+      line-height: 1.15;
+    }
+
+    .brand-copy strong {
+      color: var(--green-950);
+      font-size: 0.94rem;
+    }
+
+    .brand-copy small {
+      color: var(--ink-muted);
+
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .desktop-nav a {
+      position: relative;
+
+      color: var(--ink-soft);
+
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .desktop-nav a::after {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      left: 0;
+
+      height: 2px;
+
+      border-radius: 999px;
+      background: var(--green-700);
+
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 180ms ease;
+    }
+
+    .desktop-nav a:hover,
+    .desktop-nav a.is-active {
+      color: var(--green-900);
+    }
+
+    .desktop-nav a:hover::after,
+    .desktop-nav a.is-active::after {
+      transform: scaleX(1);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-link {
+      padding: 10px 15px;
+
+      border-radius: 999px;
+
+      color: var(--green-900);
+      background: var(--green-050);
+
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .menu-button {
+      display: none;
+
+      width: 44px;
+      height: 44px;
+      padding: 0;
+
+      border-radius: 50%;
+      background: var(--green-900);
+
+      cursor: pointer;
+    }
+
+    .menu-button span {
+      display: block;
+
+      width: 18px;
+      height: 2px;
+      margin: 5px auto;
+
+      border-radius: 999px;
+      background: var(--white);
+
+      transition:
+        transform 180ms ease,
+        opacity 180ms ease;
+    }
+
+    .menu-button.is-active span:first-child {
+      transform: translateY(3.5px) rotate(45deg);
+    }
+
+    .menu-button.is-active span:last-child {
+      transform: translateY(-3.5px) rotate(-45deg);
+    }
+
+    .mobile-nav {
+      position: fixed;
+      z-index: 999;
+      inset:
+        var(--header-height)
+        0
+        auto
+        0;
+
+      display: grid;
+      gap: 3px;
+
+      padding: 18px 20px 24px;
+
+      background: var(--cream-light);
+      border-bottom: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .mobile-nav a {
+      padding: 14px 12px;
+
+      border-radius: 12px;
+
+      color: var(--green-950);
+
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .mobile-nav a:hover {
+      background: var(--green-050);
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      padding:
+        clamp(64px, 9vw, 125px)
+        0
+        56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(300px, 0.75fr);
+
+      align-items: center;
+      gap: clamp(40px, 7vw, 100px);
+    }
+
+    .hero-logo-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+
+      width: fit-content;
+      margin-bottom: 25px;
+    }
+
+    .hero-logo-kkn {
+      width: clamp(100px, 11vw, 145px);
+      aspect-ratio: 1;
+
+      padding: 7px;
+
+      object-fit: contain;
+
+      border-radius: 50%;
+      background: var(--white);
+
+      box-shadow: 0 24px 55px rgba(23, 63, 50, 0.15);
+    }
+
+    .hero-logo-ubp {
+      width: clamp(58px, 6vw, 80px);
+      height: clamp(58px, 6vw, 80px);
+
+      padding: 5px;
+
+      object-fit: contain;
+
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+
+      box-shadow: 0 15px 35px rgba(0, 145, 205, 0.12);
+    }
+
+    .hero h1 {
+      max-width: 830px;
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(3.2rem, 7vw, 7.3rem);
+      line-height: 0.9;
+      letter-spacing: -0.065em;
+      font-weight: 500;
+    }
+
+    .hero h1 em {
+      display: block;
+
+      color: var(--green-700);
+      font-weight: inherit;
+    }
+
+    .hero-intro {
+      max-width: 680px;
+      margin: 28px 0 0;
+
+      color: var(--ink-soft);
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+
+      margin-top: 32px;
+    }
+
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+
+      min-height: 480px;
+      padding: 28px;
+
+      color: var(--white);
+
+      background:
+        linear-gradient(
+          160deg,
+          var(--green-800),
+          var(--green-950)
+        );
+
+      border-radius: var(--radius-large);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel::before,
+    .hero-panel::after {
+      content: "";
+
+      position: absolute;
+
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 50%;
+    }
+
+    .hero-panel::before {
+      width: 370px;
+      height: 370px;
+
+      top: -100px;
+      right: -160px;
+    }
+
+    .hero-panel::after {
+      width: 260px;
+      height: 260px;
+
+      bottom: -120px;
+      left: -80px;
+    }
+
+    .hero-panel-top {
+      position: relative;
+      z-index: 2;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hero-panel-center {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+      place-items: center;
+
+      min-height: 320px;
+      padding: 20px;
+    }
+
+    .hero-panel-center img {
+      width: min(78%, 235px);
+      height: auto;
+
+      object-fit: contain;
+
+      filter:
+        drop-shadow(
+          0 22px 25px rgba(0, 0, 0, 0.18)
+        );
+    }
+
+    .hero-panel-bottom {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-panel-bottom small {
+      display: block;
+      margin-bottom: 4px;
+
+      color: rgba(255, 255, 255, 0.62);
+
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-panel-bottom strong {
+      font-size: 0.88rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      margin-top: clamp(50px, 8vw, 90px);
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stat {
+      display: grid;
+      gap: 4px;
+
+      padding: 24px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      color: var(--green-900);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .stat span {
+      color: var(--ink-muted);
+
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    /* =========================================================
+       BERITA
+       ========================================================= */
+
+    .news-section {
+      padding:
+        clamp(75px, 10vw, 130px)
+        0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+
+      margin-bottom: 42px;
+    }
+
+    .news-tools {
+      flex: 0 0 min(100%, 340px);
+    }
+
+    .search-field {
+      position: relative;
+      display: block;
+    }
+
+    .search-field svg {
+      position: absolute;
+      top: 50%;
+      left: 17px;
+
+      width: 19px;
+      height: 19px;
+
+      color: var(--ink-muted);
+
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .search-field input {
+      width: 100%;
+      min-height: 50px;
+
+      padding: 12px 18px 12px 48px;
+
+      color: var(--ink);
+      background: var(--white);
+
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      outline: 0;
+
+      transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    .search-field input:focus {
+      border-color: var(--green-600);
+      box-shadow:
+        0 0 0 4px rgba(56, 124, 97, 0.11);
+    }
+
+    .featured-news {
+      margin-bottom: 28px;
+    }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(330px, 0.8fr);
+
+      overflow: hidden;
+
+      color: var(--white);
+      background: var(--green-950);
+
+      border-radius: var(--radius-large);
+      box-shadow: var(--shadow);
+
+      cursor: pointer;
+    }
+
+    .featured-cover {
+      position: relative;
+      min-height: 520px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--green-700),
+          var(--green-950)
+        );
+    }
+
+    .featured-cover img {
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+
+      object-fit: cover;
+
+      transition: transform 650ms ease;
+    }
+
+    .featured-card:hover .featured-cover img {
+      transform: scale(1.035);
+    }
+
+    .cover-placeholder {
+      display: grid;
+      place-items: center;
+
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+
+      background:
+        radial-gradient(
+          circle at 30% 20%,
+          rgba(255, 255, 255, 0.12),
+          transparent 35%
+        ),
+        linear-gradient(
+          145deg,
+          var(--green-700),
+          var(--green-950)
+        );
+    }
+
+    .cover-placeholder img {
+      width: min(44%, 190px);
+      min-height: 0;
+      height: auto;
+
+      object-fit: contain;
+      opacity: 0.86;
+    }
+
+    .featured-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 45px;
+
+      padding: clamp(30px, 5vw, 62px);
+    }
+
+    .news-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      width: fit-content;
+      padding: 7px 11px;
+
+      border-radius: 999px;
+
+      color: var(--green-950);
+      background: var(--cream);
+
+      font-size: 0.67rem;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .featured-title {
+      margin: 24px 0 18px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(2.1rem, 4vw, 4.6rem);
+      line-height: 1.01;
+      letter-spacing: -0.045em;
+      font-weight: 500;
+    }
+
+    .featured-summary {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.71);
+    }
+
+    .news-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+
+      margin-top: 22px;
+
+      color: rgba(255, 255, 255, 0.62);
+
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .featured-footer {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+
+      padding-top: 24px;
+      border-top: 1px solid var(--line-dark);
+    }
+
+    .authors-inline {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      min-width: 0;
+    }
+
+    .avatar-stack {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .avatar {
+      position: relative;
+
+      display: grid;
+      place-items: center;
+
+      width: 42px;
+      height: 42px;
+
+      overflow: hidden;
+
+      border: 3px solid var(--white);
+      border-radius: 50%;
+
+      color: var(--white);
+      background: var(--green-700);
+
+      font-size: 0.7rem;
+      font-weight: 850;
+    }
+
+    .avatar + .avatar {
+      margin-left: -12px;
+    }
+
+    .avatar img {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .authors-copy {
+      display: grid;
+
+      min-width: 0;
+      line-height: 1.3;
+    }
+
+    .authors-copy small {
+      color: inherit;
+      opacity: 0.57;
+
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .authors-copy strong {
+      overflow: hidden;
+
+      font-size: 0.78rem;
+
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .read-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      flex: 0 0 auto;
+
+      color: inherit;
+
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 24px;
+    }
+
+    .news-card {
+      display: flex;
+      flex-direction: column;
+
+      overflow: hidden;
+
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-medium);
+
+      cursor: pointer;
+
+      transition:
+        transform 220ms ease,
+        box-shadow 220ms ease,
+        border-color 220ms ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(23, 63, 50, 0.24);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .news-card-cover {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--green-700),
+          var(--green-950)
+        );
+    }
+
+    .news-card-cover > img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 450ms ease;
+    }
+
+    .news-card:hover .news-card-cover > img {
+      transform: scale(1.045);
+    }
+
+    .news-card-cover .cover-placeholder {
+      min-height: 100%;
+    }
+
+    .news-card-cover .cover-placeholder img {
+      width: 90px;
+    }
+
+    .news-card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      padding: 23px;
+    }
+
+    .news-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+
+      color: var(--ink-muted);
+
+      font-size: 0.7rem;
+      font-weight: 750;
+    }
+
+    .news-card-title {
+      margin: 15px 0 12px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      font-weight: 500;
+    }
+
+    .news-card-summary {
+      display: -webkit-box;
+      overflow: hidden;
+
+      margin: 0 0 26px;
+
+      color: var(--ink-soft);
+      font-size: 0.86rem;
+
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    .news-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+
+      margin-top: auto;
+      padding-top: 18px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .news-card .avatar {
+      width: 37px;
+      height: 37px;
+
+      border-color: var(--white);
+    }
+
+    .news-card .authors-copy strong {
+      max-width: 140px;
+      color: var(--ink);
+    }
+
+    .news-card .authors-copy small {
+      color: var(--ink-muted);
+    }
+
+    .news-card .read-link {
+      color: var(--green-800);
+    }
+
+    .state-card {
+      display: grid;
+      justify-items: center;
+      gap: 14px;
+
+      padding: 65px 30px;
+
+      text-align: center;
+
+      background: var(--white);
+      border: 1px dashed rgba(23, 63, 50, 0.25);
+      border-radius: var(--radius-medium);
+    }
+
+    .state-icon {
+      display: grid;
+      place-items: center;
+
+      width: 68px;
+      height: 68px;
+
+      color: var(--green-800);
+      background: var(--green-050);
+
+      border-radius: 50%;
+
+      font-size: 1.7rem;
+      font-weight: 850;
+    }
+
+    .state-card h3 {
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    .state-card p {
+      max-width: 520px;
+      margin: 0;
+
+      color: var(--ink-soft);
+    }
+
+    /* =========================================================
+       PORTAL KALIHURIP
+       ========================================================= */
+
+    .explore-section {
+      padding: 0 0 clamp(80px, 10vw, 130px);
+    }
+
+    .explore-card {
+      position: relative;
+
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+
+      overflow: hidden;
+      min-height: 480px;
+
+      color: var(--white);
+      background: var(--green-950);
+
+      border-radius: var(--radius-large);
+      box-shadow: var(--shadow);
+    }
+
+    .explore-art {
+      position: relative;
+      overflow: hidden;
+
+      min-height: 480px;
+
+      background:
+        linear-gradient(
+          180deg,
+          #9fcbb3 0%,
+          #d6d7a2 56%,
+          #405f3f 100%
+        );
+    }
+
+    .explore-sun {
+      position: absolute;
+      top: 65px;
+      right: 60px;
+
+      width: 100px;
+      height: 100px;
+
+      border-radius: 50%;
+
+      background: rgba(255, 240, 176, 0.9);
+
+      box-shadow:
+        0 0 0 28px rgba(255, 240, 176, 0.14);
+    }
+
+    .hill {
+      position: absolute;
+      right: -15%;
+      bottom: -30%;
+      left: -15%;
+
+      height: 68%;
+
+      border-radius: 50% 50% 0 0;
+    }
+
+    .hill-back {
+      bottom: -16%;
+
+      background: #74946a;
+      transform: rotate(-4deg);
+    }
+
+    .hill-front {
+      right: -35%;
+      bottom: -38%;
+      left: -6%;
+
+      background: #344f38;
+      transform: rotate(6deg);
+    }
+
+    .explore-word {
+      position: absolute;
+      z-index: 3;
+      bottom: 25px;
+      left: 25px;
+
+      color: rgba(255, 255, 255, 0.9);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(2.3rem, 5vw, 5rem);
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+    }
+
+    .explore-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: clamp(38px, 7vw, 90px);
+    }
+
+    .explore-content .eyebrow {
+      color: rgba(255, 255, 255, 0.56);
+    }
+
+    .explore-content .eyebrow span {
+      color: #b9e3c8;
+    }
+
+    .explore-content h2 {
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(2.4rem, 5vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      font-weight: 500;
+    }
+
+    .explore-content p {
+      max-width: 570px;
+      margin: 23px 0 30px;
+
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    /* =========================================================
+       DETAIL ARTIKEL
+       ========================================================= */
+
+    .article-view {
+      position: fixed;
+      z-index: 1500;
+      inset: 0;
+
+      overflow-y: auto;
+
+      background: var(--cream-light);
+    }
+
+    .article-topbar {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+
+      background: rgba(250, 248, 242, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+
+    .article-topbar-shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      min-height: 70px;
+    }
+
+    .article-back,
+    .share-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      min-height: 42px;
+      padding: 9px 14px;
+
+      color: var(--green-900);
+      background: var(--white);
+
+      border: 1px solid var(--line);
+      border-radius: 999px;
+
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .article-topbar-title {
+      overflow: hidden;
+
+      color: var(--ink-soft);
+
+      font-size: 0.76rem;
+      font-weight: 750;
+
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .article-header {
+      padding:
+        clamp(58px, 8vw, 105px)
+        0
+        45px;
+    }
+
+    .article-header-inner {
+      max-width: 940px;
+    }
+
+    .article-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      margin-bottom: 22px;
+      padding: 7px 11px;
+
+      color: var(--green-800);
+      background: var(--green-050);
+
+      border-radius: 999px;
+
+      font-size: 0.68rem;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .article-title {
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(2.8rem, 7vw, 7rem);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      font-weight: 500;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+
+      margin-top: 25px;
+
+      color: var(--ink-muted);
+
+      font-size: 0.84rem;
+      font-weight: 750;
+    }
+
+    .article-cover-shell {
+      padding-bottom: clamp(45px, 7vw, 85px);
+    }
+
+    .article-cover {
+      overflow: hidden;
+
+      width: 100%;
+      max-height: 760px;
+      min-height: 420px;
+
+      background: var(--green-950);
+
+      border-radius: var(--radius-large);
+      box-shadow: var(--shadow);
+    }
+
+    .article-cover > img {
+      width: 100%;
+      max-height: 760px;
+      min-height: 420px;
+
+      object-fit: cover;
+    }
+
+    .article-cover .cover-placeholder {
+      min-height: 520px;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1fr)
+        310px;
+
+      align-items: start;
+      gap: clamp(45px, 8vw, 100px);
+
+      padding-bottom: clamp(80px, 10vw, 130px);
+    }
+
+    .article-content {
+      min-width: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(1.08rem, 1.6vw, 1.25rem);
+      line-height: 1.9;
+    }
+
+    .article-content p {
+      margin: 0 0 1.55em;
+    }
+
+    .article-content p:first-child::first-letter {
+      float: left;
+
+      margin: 0.1em 0.12em 0 0;
+
+      color: var(--green-800);
+
+      font-size: 4.2em;
+      line-height: 0.78;
+    }
+
+    .article-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar-card {
+      padding: 25px;
+
+      background: var(--white);
+
+      border: 1px solid var(--line);
+      border-radius: var(--radius-medium);
+    }
+
+    .sidebar-label {
+      margin: 0 0 18px;
+
+      color: var(--ink-muted);
+
+      font-size: 0.68rem;
+      font-weight: 850;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .article-authors {
+      display: grid;
+      gap: 14px;
+    }
+
+    .author-card {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+
+      align-items: center;
+      gap: 13px;
+    }
+
+    .author-portrait {
+      position: relative;
+
+      display: grid;
+      place-items: center;
+
+      width: 58px;
+      aspect-ratio: 4 / 5;
+
+      overflow: hidden;
+
+      color: var(--white);
+      background: var(--green-700);
+
+      border-radius: 12px;
+
+      font-size: 0.73rem;
+      font-weight: 850;
+    }
+
+    .author-portrait img {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .author-info {
+      display: grid;
+      gap: 2px;
+
+      min-width: 0;
+    }
+
+    .author-info strong {
+      color: var(--green-950);
+
+      font-size: 0.8rem;
+      line-height: 1.25;
+    }
+
+    .author-info span {
+      color: var(--ink-muted);
+
+      font-size: 0.72rem;
+      line-height: 1.35;
+    }
+
+    .article-media-section {
+      padding:
+        clamp(75px, 10vw, 125px)
+        0;
+
+      background: var(--green-950);
+    }
+
+    .article-media-section .eyebrow {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .article-media-section .eyebrow span {
+      color: #b9e3c8;
+    }
+
+    .article-media-section .section-title {
+      color: var(--white);
+    }
+
+    .article-media-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+
+      margin-top: 42px;
+    }
+
+    .media-item {
+      grid-column: span 6;
+
+      overflow: hidden;
+
+      background: #0b211a;
+
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: var(--radius-medium);
+    }
+
+    .media-item.is-portrait {
+      grid-column: span 4;
+    }
+
+    .media-frame {
+      position: relative;
+      overflow: hidden;
+
+      background: #0b211a;
+    }
+
+    .media-item.is-landscape .media-frame,
+    .media-item.is-auto .media-frame {
+      aspect-ratio: 16 / 10;
+    }
+
+    .media-item.is-portrait .media-frame {
+      aspect-ratio: 9 / 14;
+    }
+
+    .media-item.is-square .media-frame {
+      aspect-ratio: 1;
+    }
+
+    .media-frame img,
+    .media-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .media-frame img {
+      object-fit: cover;
+    }
+
+    .media-frame iframe {
+      background: #000000;
+    }
+
+    .media-caption {
+      margin: 0;
+      padding: 14px 17px;
+
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.76rem;
+    }
+
+    .article-end {
+      padding:
+        clamp(60px, 8vw, 100px)
+        0;
+
+      text-align: center;
+    }
+
+    .article-end h2 {
+      margin: 0 0 22px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+      font-weight: 500;
+    }
+
+    /* =========================================================
+       LOADING
+       ========================================================= */
+
+    .loading-overlay {
+      position: fixed;
+      z-index: 3000;
+      inset: 0;
+
+      display: grid;
+      place-items: center;
+
+      padding: 24px;
+
+      background: rgba(250, 248, 242, 0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    .loading-card {
+      display: grid;
+      justify-items: center;
+      gap: 17px;
+
+      min-width: min(100%, 290px);
+      padding: 35px;
+
+      text-align: center;
+
+      background: var(--white);
+
+      border: 1px solid var(--line);
+      border-radius: var(--radius-medium);
+
+      box-shadow: var(--shadow-soft);
+    }
+
+    .spinner {
+      width: 44px;
+      height: 44px;
+
+      border: 4px solid var(--green-100);
+      border-top-color: var(--green-700);
+      border-radius: 50%;
+
+      animation: spin 850ms linear infinite;
+    }
+
+    .loading-card strong {
+      color: var(--green-950);
+    }
+
+    .loading-card small {
+      color: var(--ink-muted);
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .toast {
+      position: fixed;
+      z-index: 3500;
+      right: 20px;
+      bottom: 20px;
+
+      max-width: min(
+        calc(100% - 40px),
+        380px
+      );
+
+      padding: 14px 17px;
+
+      color: var(--white);
+      background: var(--green-950);
+
+      border-radius: 13px;
+      box-shadow: var(--shadow-soft);
+
+      font-size: 0.83rem;
+      font-weight: 700;
+
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+
+      transition:
+        opacity 180ms ease,
+        transform 180ms ease;
+    }
+
+    .toast.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    .site-footer {
+      padding: 65px 0 25px;
+
+      color: rgba(255, 255, 255, 0.72);
+      background: var(--green-950);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+
+      padding-bottom: 45px;
+    }
+
+    .footer-logo-row {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+
+      margin-bottom: 20px;
+    }
+
+    .footer-logo-row img:first-child {
+      width: 76px;
+      height: 76px;
+      padding: 4px;
+
+      object-fit: contain;
+
+      background: var(--white);
+      border-radius: 50%;
+    }
+
+    .footer-logo-row img:last-child {
+      width: 76px;
+      height: 76px;
+
+      object-fit: contain;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+
+      color: var(--white);
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 2.1rem;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .footer-brand p {
+      max-width: 490px;
+      margin: 14px 0 0;
+
+      font-size: 0.86rem;
+    }
+
+    .footer-links {
+      display: grid;
+      grid-template-columns:
+        0.8fr
+        1.15fr
+        1.35fr;
+
+      gap: 30px;
+    }
+
+    .footer-links div {
+      display: grid;
+      align-content: start;
+      gap: 10px;
+
+      min-width: 0;
+    }
+
+    .footer-links strong {
+      margin-bottom: 4px;
+
+      color: var(--white);
+      font-size: 0.77rem;
+    }
+
+    .footer-links a {
+      width: fit-content;
+      max-width: 100%;
+
+      color: rgba(255, 255, 255, 0.58);
+
+      font-size: 0.8rem;
+      line-height: 1.45;
+      text-decoration: none;
+
+      overflow-wrap: anywhere;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      padding-top: 24px;
+
+      border-top: 1px solid var(--line-dark);
+
+      font-size: 0.72rem;
+    }
+
+    .footer-bottom a {
+      text-decoration: none;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 980px) {
+      .desktop-nav,
+      .contact-link {
+        display: none;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        min-height: 420px;
+      }
+
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-cover {
+        min-height: 400px;
+      }
+
+      .featured-cover img {
+        min-height: 400px;
+      }
+
+      .news-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .explore-card {
+        grid-template-columns: 1fr;
+      }
+
+      .explore-art {
+        min-height: 360px;
+      }
+
+      .article-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .article-sidebar {
+        position: static;
+      }
+
+      .article-authors {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      :root {
+        --header-height: 70px;
+      }
+
+      .shell {
+        width: min(
+          calc(100% - 28px),
+          var(--shell)
+        );
+      }
+
+      .brand-logo-ubp {
+        width: 35px;
+        height: 35px;
+      }
+
+      .brand-logo-kkn {
+        width: 39px;
+        height: 39px;
+      }
+
+      .brand-copy small {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.1rem, 17vw, 5rem);
+      }
+
+      .hero-panel {
+        min-height: 380px;
+        padding: 22px;
+      }
+
+      .hero-panel-center {
+        min-height: 250px;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        grid-template-columns: 80px 1fr;
+        align-items: center;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+
+      .stat strong {
+        font-size: 2.2rem;
+      }
+
+      .section-header {
+        display: grid;
+        align-items: stretch;
+      }
+
+      .news-tools {
+        width: 100%;
+      }
+
+      .featured-cover,
+      .featured-cover img {
+        min-height: 310px;
+      }
+
+      .featured-content {
+        padding: 27px;
+      }
+
+      .featured-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .article-topbar-title {
+        display: none;
+      }
+
+      .article-header {
+        padding-top: 45px;
+      }
+
+      .article-cover {
+        min-height: 280px;
+        border-radius: 20px;
+      }
+
+      .article-cover > img {
+        min-height: 280px;
+      }
+
+      .article-cover .cover-placeholder {
+        min-height: 330px;
+      }
+
+      .article-authors {
+        grid-template-columns: 1fr;
+      }
+
+      .article-media-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .media-item,
+      .media-item.is-portrait {
+        grid-column: auto;
+      }
+
+      .media-item.is-portrait {
+        max-width: 420px;
+        margin-inline: auto;
+      }
+
+      .footer-links {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .brand {
+        gap: 8px;
+      }
+
+      .brand-copy strong {
+        font-size: 0.76rem;
+      }
+
+      .brand-logo-ubp {
+        width: 31px;
+        height: 31px;
+      }
+
+      .brand-logo-kkn {
+        width: 35px;
+        height: 35px;
+      }
+
+      .hero-logo-kkn {
+        width: 91px;
+      }
+
+      .hero-logo-ubp {
+        width: 53px;
+        height: 53px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .news-card-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#konten">
+    Lewati ke konten
+  </a>
+
+  <header class="site-header" id="beranda">
+    <div class="shell header-shell">
+
+      <a
+        class="brand"
+        href="./"
+        aria-label="Beranda KKN Desa Sirnabaya 2026"
+      >
+        <span class="brand-logos" aria-hidden="true">
+          <img
+            class="brand-logo brand-logo-ubp"
+            src="assets/img/logo-ubp-karawang.png"
+            alt=""
+          >
+
+          <img
+            class="brand-logo brand-logo-kkn"
+            src="assets/img/logo-kkn-sirnabaya-2026.png"
+            alt=""
+          >
+        </span>
+
+        <span class="brand-copy">
+          <strong>KKN Desa Sirnabaya</strong>
+          <small>UBP Karawang · 2026</small>
+        </span>
+      </a>
+
+      <nav
+        class="desktop-nav"
+        aria-label="Navigasi utama"
+      >
+        <a class="is-active" href="#beranda">
+          Beranda
+        </a>
+
+        <a href="#berita">
+          Berita
+        </a>
+
+        <a
+          href="https://ubpkknsirnabaya2026-dev.github.io/dusunkalihurip-desasirnabaya/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Dusun Kalihurip
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <a
+          class="contact-link"
+          href="mailto:ubpkknsirnabaya2026@gmail.com"
+        >
+          Hubungi Kami
+        </a>
+
+        <button
+          class="menu-button"
+          id="menuButton"
+          type="button"
+          aria-label="Buka menu"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav
+      class="mobile-nav"
+      id="mobileNav"
+      aria-label="Navigasi seluler"
+      hidden
+    >
+      <a href="#beranda">
+        Beranda
+      </a>
+
+      <a href="#berita">
+        Berita
+      </a>
+
+      <a
+        href="https://ubpkknsirnabaya2026-dev.github.io/dusunkalihurip-desasirnabaya/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Dusun Kalihurip
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@kkn.desa.sirnabaya5"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TikTok
+      </a>
+
+      <a
+        href="https://www.instagram.com/kknsirnabaya26/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <a href="mailto:ubpkknsirnabaya2026@gmail.com">
+        Email
+      </a>
+    </nav>
+  </header>
+
+  <main id="konten">
+    <div id="homeView">
+
+      <section class="hero">
+        <div class="shell">
+
+          <div class="hero-grid">
+
+            <div class="hero-copy">
+
+              <div
+                class="hero-logo-row"
+                aria-label="Identitas KKN Desa Sirnabaya 2026"
+              >
+                <img
+                  class="hero-logo-kkn"
+                  src="assets/img/logo-kkn-sirnabaya-2026.png"
+                  alt="Logo KKN Desa Sirnabaya 2026"
+                >
+
+                <img
+                  class="hero-logo-ubp"
+                  src="assets/img/logo-ubp-karawang.png"
+                  alt="Logo Universitas Buana Perjuangan Karawang"
+                >
+              </div>
+
+              <p class="eyebrow">
+                <span>Portal Berita KKN</span>
+                Desa Sirnabaya · 2026
+              </p>
+
+              <h1>
+                Catatan dari
+                <em>Sirnabaya.</em>
+              </h1>
+
+              <p class="hero-intro">
+                Kumpulan cerita program kerja, proses pengabdian,
+                kolaborasi mahasiswa, dan dokumentasi perjalanan KKN
+                Universitas Buana Perjuangan Karawang bersama
+                masyarakat Desa Sirnabaya.
+              </p>
+
+              <div class="hero-actions">
+
+                <a
+                  class="button button-primary"
+                  href="#berita"
+                >
+                  Baca berita terbaru
+                  <span aria-hidden="true">↓</span>
+                </a>
+
+                <a
+                  class="text-link"
+                  href="https://ubpkknsirnabaya2026-dev.github.io/dusunkalihurip-desasirnabaya/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Jelajahi Dusun Kalihurip
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <aside
+              class="hero-panel"
+              aria-label="Informasi portal KKN"
+            >
+              <div class="hero-panel-top">
+                <span>Sirnabaya Archive</span>
+                <span>2026</span>
+              </div>
+
+              <div class="hero-panel-center">
+                <img
+                  src="assets/img/logo-kkn-sirnabaya-2026.png"
+                  alt="Logo KKN Desa Sirnabaya 2026"
+                >
+              </div>
+
+              <div class="hero-panel-bottom">
+
+                <div>
+                  <small>Lokasi</small>
+                  <strong>Desa Sirnabaya</strong>
+                </div>
+
+                <div>
+                  <small>Institusi</small>
+                  <strong>UBP Karawang</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <div
+            class="hero-stats"
+            aria-label="Statistik portal"
+          >
+            <div class="stat">
+              <strong id="newsCount">0</strong>
+              <span>Berita program kerja</span>
+            </div>
+
+            <div class="stat">
+              <strong id="memberCount">0</strong>
+              <span>Mahasiswa terdaftar</span>
+            </div>
+
+            <div class="stat">
+              <strong>01</strong>
+              <span>Portal dokumentasi KKN</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="news-section"
+        id="berita"
+        aria-labelledby="newsTitle"
+      >
+        <div class="shell">
+
+          <div class="section-header">
+
+            <div>
+              <p class="eyebrow">
+                <span>Berita Program Kerja</span>
+                Terbaru dari lapangan
+              </p>
+
+              <h2
+                class="section-title"
+                id="newsTitle"
+              >
+                Setiap kegiatan memiliki cerita dan orang-orang
+                di baliknya.
+              </h2>
+
+              <p class="section-description">
+                Buka setiap berita untuk melihat cerita kegiatan,
+                mahasiswa pelaksana, serta foto dan video dokumentasi.
+              </p>
+            </div>
+
+            <div class="news-tools">
+              <label class="search-field">
+
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-3.5-3.5"></path>
+                </svg>
+
+                <input
+                  id="newsSearch"
+                  type="search"
+                  placeholder="Cari judul atau nama mahasiswa..."
+                  autocomplete="off"
+                  aria-label="Cari berita"
+                >
+              </label>
+            </div>
+          </div>
+
+          <div
+            class="featured-news"
+            id="featuredNews"
+            aria-live="polite"
+          ></div>
+
+          <div
+            class="news-grid"
+            id="newsGrid"
+            aria-live="polite"
+          ></div>
+
+          <div
+            class="state-card"
+            id="emptyNews"
+            hidden
+          >
+            <div class="state-icon">⌕</div>
+
+            <h3>Berita tidak ditemukan</h3>
+
+            <p>
+              Coba gunakan kata kunci lain atau hapus pencarian
+              untuk menampilkan seluruh berita.
+            </p>
+          </div>
+
+          <div
+            class="state-card"
+            id="newsError"
+            hidden
+          >
+            <div class="state-icon">!</div>
+
+            <h3>Data berita belum dapat dimuat</h3>
+
+            <p id="newsErrorMessage">
+              Terjadi kendala ketika menghubungi backend portal.
+            </p>
+
+            <button
+              class="button button-primary"
+              id="retryButton"
+              type="button"
+            >
+              Muat ulang data
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="explore-section">
+        <div class="shell">
+
+          <article class="explore-card">
+
+            <div
+              class="explore-art"
+              aria-hidden="true"
+            >
+              <div class="explore-sun"></div>
+              <div class="hill hill-back"></div>
+              <div class="hill hill-front"></div>
+
+              <span class="explore-word">
+                Kalihurip
+              </span>
+            </div>
+
+            <div class="explore-content">
+
+              <p class="eyebrow">
+                <span>Portal Wilayah</span>
+                Dusun Kalihurip
+              </p>
+
+              <h2>
+                Mengenal wilayah lebih dekat.
+              </h2>
+
+              <p>
+                Jelajahi profil Dusun Kalihurip, potensi wilayah,
+                kondisi lingkungan, kegiatan warga, dokumentasi,
+                serta pengembangan Bank Sampah Digital.
+              </p>
+
+              <div>
+                <a
+                  class="button button-light"
+                  href="https://ubpkknsirnabaya2026-dev.github.io/dusunkalihurip-desasirnabaya/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Kunjungi portal Kalihurip
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <section
+    class="article-view"
+    id="articleView"
+    aria-label="Detail berita"
+    hidden
+  >
+    <div class="article-topbar">
+      <div class="shell article-topbar-shell">
+
+        <button
+          class="article-back"
+          id="articleBackButton"
+          type="button"
+        >
+          <span aria-hidden="true">←</span>
+          Kembali
+        </button>
+
+        <span
+          class="article-topbar-title"
+          id="articleTopbarTitle"
+        >
+          Berita KKN Desa Sirnabaya 2026
+        </span>
+
+        <button
+          class="share-button"
+          id="shareButton"
+          type="button"
+        >
+          Bagikan
+          <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="articleContent"></div>
+  </section>
+
+  <footer class="site-footer" id="footer">
+    <div class="shell footer-grid">
+
+      <div class="footer-brand">
+
+        <div class="footer-logo-row">
+          <img
+            src="assets/img/logo-kkn-sirnabaya-2026.png"
+            alt="Logo KKN Desa Sirnabaya 2026"
+          >
+
+          <img
+            src="assets/img/logo-ubp-karawang.png"
+            alt="Logo Universitas Buana Perjuangan Karawang"
+          >
+        </div>
+
+        <h2>KKN Desa Sirnabaya 2026</h2>
+
+        <p>
+          Portal berita, informasi, dan dokumentasi KKN
+          Universitas Buana Perjuangan Karawang bersama
+          masyarakat Desa Sirnabaya.
+        </p>
+      </div>
+
+      <div class="footer-links">
+
+        <div>
+          <strong>Navigasi</strong>
+
+          <a href="#beranda">
+            Beranda
+          </a>
+
+          <a href="#berita">
+            Berita
+          </a>
+
+          <a
+            href="https://ubpkknsirnabaya2026-dev.github.io/dusunkalihurip-desasirnabaya/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Dusun Kalihurip
+          </a>
+        </div>
+
+        <div>
+          <strong>Media Sosial</strong>
+
+          <a
+            href="https://www.tiktok.com/@kkn.desa.sirnabaya5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TikTok: @kkn.desa.sirnabaya5
+          </a>
+
+          <a
+            href="https://www.instagram.com/kknsirnabaya26/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram: @kknsirnabaya26
+          </a>
+        </div>
+
+        <div>
+          <strong>Kontak & Portal</strong>
+
+          <a href="mailto:ubpkknsirnabaya2026@gmail.com">
+            Email: ubpkknsirnabaya2026@gmail.com
+          </a>
+
+          <a
+            href="https://ubpkknsirnabaya2026-dev.github.io/dusunkalihurip-desasirnabaya/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Portal Dusun Kalihurip
+          </a>
+
+          <a
+            href="https://www.ubpkarawang.ac.id/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Universitas Buana Perjuangan Karawang
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      <span>
+        © 2026 KKN Desa Sirnabaya · UBP Karawang
+      </span>
+
+      <a href="#beranda">
+        Kembali ke atas ↑
+      </a>
+    </div>
+  </footer>
+
+  <div
+    class="loading-overlay"
+    id="loadingOverlay"
+    role="status"
+    aria-live="polite"
+  >
+    <div class="loading-card">
+      <div class="spinner"></div>
+
+      <strong>Memuat portal berita</strong>
+
+      <small>
+        Mengambil data dari Spreadsheet dan Google Drive.
+      </small>
+    </div>
+  </div>
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+  <noscript>
+    <div
+      style="
+        margin: 30px;
+        padding: 22px;
+        border-radius: 16px;
+        background: #ffffff;
+        color: #173f32;
+      "
+    >
+      JavaScript perlu diaktifkan untuk mengambil berita
+      dari backend Google Apps Script.
+    </div>
+  </noscript>
+
+  <script>
+    "use strict";
+
+    const API_URL =
+      "https://script.google.com/macros/s/" +
+      "AKfycbysU4U6bV7yenTqY7ONxYQYJIhfzgQA6YjXFFcmhjANiDq3KnSgEfJLDuBln-nUdra1bQ" +
+      "/exec";
+
+    const LOGO_KKN =
+      "assets/img/logo-kkn-sirnabaya-2026.png";
+
+    const state = {
+      news: [],
+      members: [],
+      gallery: [],
+      articleCache: new Map(),
+      activeArticle: null,
+      search: ""
+    };
+
+    const elements = {
+      homeView:
+        document.getElementById("homeView"),
+
+      articleView:
+        document.getElementById("articleView"),
+
+      articleContent:
+        document.getElementById("articleContent"),
+
+      articleTopbarTitle:
+        document.getElementById("articleTopbarTitle"),
+
+      featuredNews:
+        document.getElementById("featuredNews"),
+
+      newsGrid:
+        document.getElementById("newsGrid"),
+
+      emptyNews:
+        document.getElementById("emptyNews"),
+
+      newsError:
+        document.getElementById("newsError"),
+
+      newsErrorMessage:
+        document.getElementById("newsErrorMessage"),
+
+      newsSearch:
+        document.getElementById("newsSearch"),
+
+      newsCount:
+        document.getElementById("newsCount"),
+
+      memberCount:
+        document.getElementById("memberCount"),
+
+      loadingOverlay:
+        document.getElementById("loadingOverlay"),
+
+      retryButton:
+        document.getElementById("retryButton"),
+
+      articleBackButton:
+        document.getElementById("articleBackButton"),
+
+      shareButton:
+        document.getElementById("shareButton"),
+
+      menuButton:
+        document.getElementById("menuButton"),
+
+      mobileNav:
+        document.getElementById("mobileNav"),
+
+      toast:
+        document.getElementById("toast"),
+
+      footer:
+        document.getElementById("footer")
+    };
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      initialize
+    );
+
+    async function initialize() {
+      bindEvents();
+      await loadHomeData();
+    }
+
+    function bindEvents() {
+      elements.newsSearch.addEventListener(
+        "input",
+        function (event) {
+          state.search =
+            String(event.target.value || "")
+              .trim()
+              .toLowerCase();
+
+          renderNews();
+        }
+      );
+
+      elements.retryButton.addEventListener(
+        "click",
+        loadHomeData
+      );
+
+      elements.articleBackButton.addEventListener(
+        "click",
+        function () {
+          closeArticle(true);
+        }
+      );
+
+      elements.shareButton.addEventListener(
+        "click",
+        shareActiveArticle
+      );
+
+      elements.menuButton.addEventListener(
+        "click",
+        toggleMobileMenu
+      );
+
+      elements.mobileNav.addEventListener(
+        "click",
+        function (event) {
+          if (event.target.closest("a")) {
+            closeMobileMenu();
+          }
+        }
+      );
+
+      document.addEventListener(
+        "click",
+        function (event) {
+          const trigger =
+            event.target.closest(
+              "[data-open-article]"
+            );
+
+          if (!trigger) {
+            return;
+          }
+
+          const slug =
+            trigger.dataset.openArticle;
+
+          if (slug) {
+            openArticle(slug, true);
+          }
+        }
+      );
+
+      document.addEventListener(
+        "keydown",
+        function (event) {
+          const trigger =
+            event.target.closest(
+              "[data-open-article]"
+            );
+
+          if (
+            trigger &&
+            (
+              event.key === "Enter" ||
+              event.key === " "
+            )
+          ) {
+            event.preventDefault();
+
+            const slug =
+              trigger.dataset.openArticle;
+
+            if (slug) {
+              openArticle(slug, true);
+            }
+          }
+
+          if (
+            event.key === "Escape" &&
+            !elements.articleView.hidden
+          ) {
+            closeArticle(true);
+          }
+        }
+      );
+
+      window.addEventListener(
+        "popstate",
+        routeFromUrl
+      );
+    }
+
+    async function requestApi(
+      action,
+      parameters = {}
+    ) {
+      const url = new URL(API_URL);
+
+      url.searchParams.set(
+        "action",
+        action
+      );
+
+      Object.entries(parameters).forEach(
+        function ([key, value]) {
+          if (
+            value !== undefined &&
+            value !== null &&
+            value !== ""
+          ) {
+            url.searchParams.set(
+              key,
+              String(value)
+            );
+          }
+        }
+      );
+
+      const response = await fetch(
+        url.toString(),
+        {
+          method: "GET",
+          cache: "no-store",
+          redirect: "follow"
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(
+          "Backend memberikan status " +
+          response.status +
+          "."
+        );
+      }
+
+      const result = await response.json();
+
+      if (!result || result.success !== true) {
+        throw new Error(
+          result && result.error
+            ? result.error
+            : "Respons backend tidak valid."
+        );
+      }
+
+      return result.data;
+    }
+
+    async function loadHomeData() {
+      setLoading(
+        true,
+        "Memuat portal berita"
+      );
+
+      hideError();
+
+      try {
+        const data = await requestApi(
+          "getHome"
+        );
+
+        const rawNews =
+          data.news ||
+          data.programs ||
+          [];
+
+        state.news =
+          Array.isArray(rawNews)
+            ? rawNews.map(normalizeNews)
+            : [];
+
+        state.members =
+          Array.isArray(data.members)
+            ? data.members.map(
+                normalizeMember
+              )
+            : [];
+
+        state.gallery =
+          Array.isArray(data.gallery)
+            ? data.gallery.map(
+                normalizeMedia
+              )
+            : [];
+
+        elements.newsCount.textContent =
+          String(state.news.length)
+            .padStart(2, "0");
+
+        elements.memberCount.textContent =
+          String(state.members.length)
+            .padStart(2, "0");
+
+        renderNews();
+
+        await routeFromUrl();
+
+      } catch (error) {
+        console.error(error);
+
+        showError(
+          error.message ||
+          "Data portal belum dapat dimuat."
+        );
+
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    function normalizeNews(raw) {
+      const membersRaw =
+        raw.anggota ||
+        raw.members ||
+        [];
+
+      const mediaRaw =
+        raw.media ||
+        [];
+
+      const title =
+        cleanText(
+          raw.judul ||
+          raw.title ||
+          "Berita KKN"
+        );
+
+      return {
+        id:
+          cleanText(
+            raw.id ||
+            raw.slug ||
+            slugify(title)
+          ),
+
+        slug:
+          cleanText(
+            raw.slug ||
+            raw.id ||
+            slugify(title)
+          ),
+
+        title: title,
+
+        date:
+          cleanText(
+            raw.tanggal ||
+            raw.date ||
+            ""
+          ),
+
+        dateLabel:
+          cleanText(
+            raw.tanggalLabel ||
+            formatDateIndonesia(
+              raw.tanggal ||
+              raw.date
+            )
+          ),
+
+        location:
+          cleanText(
+            raw.lokasi ||
+            raw.location ||
+            "Desa Sirnabaya"
+          ),
+
+        summary:
+          cleanText(
+            raw.ringkasan ||
+            raw.summary ||
+            ""
+          ),
+
+        content:
+          String(
+            raw.isi ||
+            raw.content ||
+            ""
+          ).trim(),
+
+        members:
+          Array.isArray(membersRaw)
+            ? membersRaw.map(
+                normalizeMember
+              )
+            : [],
+
+        cover:
+          normalizeMedia(
+            raw.cover || {}
+          ),
+
+        media:
+          Array.isArray(mediaRaw)
+            ? mediaRaw.map(
+                normalizeMedia
+              )
+            : []
+      };
+    }
+
+    function normalizeMember(raw) {
+      const photoRaw =
+        raw.foto ||
+        raw.photo ||
+        {};
+
+      return {
+        name:
+          cleanText(
+            raw.nama ||
+            raw.name ||
+            "Mahasiswa KKN"
+          ),
+
+        nim:
+          cleanText(
+            raw.nim ||
+            ""
+          ),
+
+        studyProgram:
+          cleanText(
+            raw.prodi ||
+            raw.studyProgram ||
+            ""
+          ),
+
+        division:
+          cleanText(
+            raw.divisi ||
+            raw.division ||
+            ""
+          ),
+
+        photo:
+          normalizeMedia(photoRaw)
+      };
+    }
+
+    function normalizeMedia(raw) {
+      if (!raw) {
+        return {
+          id: "",
+          name: "",
+          type: "",
+          orientation: "auto",
+          caption: "",
+          url: "",
+          thumbnailUrl: "",
+          previewUrl: ""
+        };
+      }
+
+      if (typeof raw === "string") {
+        return {
+          id: "",
+          name: "",
+          type: "foto",
+          orientation: "auto",
+          caption: "",
+          url: raw,
+          thumbnailUrl: raw,
+          previewUrl: raw
+        };
+      }
+
+      return {
+        id:
+          cleanText(
+            raw.id ||
+            ""
+          ),
+
+        name:
+          cleanText(
+            raw.nama ||
+            raw.name ||
+            ""
+          ),
+
+        type:
+          cleanText(
+            raw.jenis ||
+            raw.type ||
+            ""
+          ).toLowerCase(),
+
+        orientation:
+          cleanText(
+            raw.orientasi ||
+            raw.orientation ||
+            "auto"
+          ).toLowerCase(),
+
+        caption:
+          cleanText(
+            raw.caption ||
+            ""
+          ),
+
+        url:
+          cleanText(
+            raw.url ||
+            raw.thumbnailUrl ||
+            raw.directUrl ||
+            ""
+          ),
+
+        thumbnailUrl:
+          cleanText(
+            raw.thumbnailUrl ||
+            raw.url ||
+            raw.directUrl ||
+            ""
+          ),
+
+        previewUrl:
+          cleanText(
+            raw.previewUrl ||
+            raw.url ||
+            raw.viewUrl ||
+            ""
+          )
+      };
+    }
+
+    function renderNews() {
+      const filteredNews =
+        filterNews(
+          state.news,
+          state.search
+        );
+
+      elements.featuredNews.innerHTML = "";
+      elements.newsGrid.innerHTML = "";
+
+      elements.emptyNews.hidden =
+        filteredNews.length > 0;
+
+      if (filteredNews.length === 0) {
+        return;
+      }
+
+      const featured =
+        filteredNews[0];
+
+      const remaining =
+        filteredNews.slice(1);
+
+      elements.featuredNews.innerHTML =
+        createFeaturedNews(featured);
+
+      elements.newsGrid.innerHTML =
+        remaining
+          .map(createNewsCard)
+          .join("");
+    }
+
+    function filterNews(news, keyword) {
+      if (!keyword) {
+        return news;
+      }
+
+      return news.filter(
+        function (item) {
+          const searchable = [
+            item.title,
+            item.location,
+            item.summary,
+            item.content,
+            item.members
+              .map(
+                function (member) {
+                  return member.name;
+                }
+              )
+              .join(" ")
+          ]
+            .join(" ")
+            .toLowerCase();
+
+          return searchable.includes(keyword);
+        }
+      );
+    }
+
+    function createFeaturedNews(news) {
+      return `
+        <article
+          class="featured-card"
+          data-open-article="${escapeAttribute(news.slug)}"
+          tabindex="0"
+          role="link"
+          aria-label="Baca berita ${escapeAttribute(news.title)}"
+        >
+          <div class="featured-cover">
+            ${createCover(news.cover, news.title)}
+          </div>
+
+          <div class="featured-content">
+            <div>
+              <span class="news-label">
+                Berita Terbaru
+              </span>
+
+              <h3 class="featured-title">
+                ${escapeHtml(news.title)}
+              </h3>
+
+              <p class="featured-summary">
+                ${
+                  escapeHtml(
+                    news.summary ||
+                    excerpt(news.content, 230) ||
+                    "Buka berita untuk membaca cerita lengkap kegiatan ini."
+                  )
+                }
+              </p>
+
+              <div class="news-meta">
+                <span>
+                  ${escapeHtml(
+                    news.dateLabel ||
+                    "Tanggal belum tersedia"
+                  )}
+                </span>
+
+                <span>
+                  ${escapeHtml(
+                    news.location ||
+                    "Desa Sirnabaya"
+                  )}
+                </span>
+              </div>
+            </div>
+
+            <div class="featured-footer">
+              ${createAuthorsInline(news.members)}
+
+              <span class="read-link">
+                Baca selengkapnya
+                <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function createNewsCard(news) {
+      return `
+        <article
+          class="news-card"
+          data-open-article="${escapeAttribute(news.slug)}"
+          tabindex="0"
+          role="link"
+          aria-label="Baca berita ${escapeAttribute(news.title)}"
+        >
+          <div class="news-card-cover">
+            ${createCover(news.cover, news.title)}
+          </div>
+
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span>
+                ${escapeHtml(
+                  news.dateLabel ||
+                  "Tanggal belum tersedia"
+                )}
+              </span>
+
+              <span>
+                ${escapeHtml(
+                  news.location ||
+                  "Desa Sirnabaya"
+                )}
+              </span>
+            </div>
+
+            <h3 class="news-card-title">
+              ${escapeHtml(news.title)}
+            </h3>
+
+            <p class="news-card-summary">
+              ${
+                escapeHtml(
+                  news.summary ||
+                  excerpt(news.content, 160) ||
+                  "Buka berita untuk melihat dokumentasi kegiatan."
+                )
+              }
+            </p>
+
+            <div class="news-card-footer">
+              ${createAuthorsInline(news.members)}
+
+              <span class="read-link">
+                Baca
+                <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function createCover(
+      media,
+      title
+    ) {
+      const url =
+        media &&
+        (
+          media.thumbnailUrl ||
+          media.url
+        );
+
+      if (!url) {
+        return `
+          <div class="cover-placeholder">
+            <img
+              src="${LOGO_KKN}"
+              alt=""
+            >
+          </div>
+        `;
+      }
+
+      return `
+        <img
+          src="${escapeAttribute(url)}"
+          alt="${escapeAttribute(title)}"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          onerror="
+            this.parentElement.innerHTML =
+            '<div class=&quot;cover-placeholder&quot;>' +
+            '<img src=&quot;${LOGO_KKN}&quot; alt=&quot;&quot;>' +
+            '</div>';
+          "
+        >
+      `;
+    }
+
+    function createAuthorsInline(members) {
+      if (
+        !Array.isArray(members) ||
+        members.length === 0
+      ) {
+        return `
+          <div class="authors-inline">
+            <div class="authors-copy">
+              <small>Pelaksana</small>
+              <strong>Mahasiswa KKN Sirnabaya</strong>
+            </div>
+          </div>
+        `;
+      }
+
+      const visible =
+        members.slice(0, 3);
+
+      const avatarHtml =
+        visible
+          .map(createAvatar)
+          .join("");
+
+      const firstNames =
+        members
+          .slice(0, 2)
+          .map(
+            function (member) {
+              return getFirstName(
+                member.name
+              );
+            }
+          );
+
+      let namesLabel =
+        firstNames.join(" dan ");
+
+      if (members.length > 2) {
+        namesLabel +=
+          ` +${members.length - 2} lainnya`;
+      }
+
+      return `
+        <div class="authors-inline">
+          <div class="avatar-stack">
+            ${avatarHtml}
+          </div>
+
+          <div class="authors-copy">
+            <small>Pelaksana</small>
+
+            <strong title="${escapeAttribute(
+              members
+                .map(
+                  function (member) {
+                    return member.name;
+                  }
+                )
+                .join(", ")
+            )}">
+              ${escapeHtml(namesLabel)}
+            </strong>
+          </div>
+        </div>
+      `;
+    }
+
+    function createAvatar(member) {
+      const initials =
+        getInitials(member.name);
+
+      const photoUrl =
+        member.photo &&
+        (
+          member.photo.thumbnailUrl ||
+          member.photo.url
+        );
+
+      return `
+        <span
+          class="avatar"
+          title="${escapeAttribute(member.name)}"
+        >
+          <span>
+            ${escapeHtml(initials)}
+          </span>
+
+          ${
+            photoUrl
+              ? `
+                <img
+                  src="${escapeAttribute(photoUrl)}"
+                  alt=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.remove()"
+                >
+              `
+              : ""
+          }
+        </span>
+      `;
+    }
+
+    async function routeFromUrl() {
+      const url =
+        new URL(window.location.href);
+
+      const slug =
+        url.searchParams.get("berita");
+
+      if (slug) {
+        await openArticle(
+          slug,
+          false
+        );
+
+      } else {
+        showHome();
+      }
+    }
+
+    async function openArticle(
+      slug,
+      pushHistory
+    ) {
+      closeMobileMenu();
+
+      if (pushHistory) {
+        const url =
+          new URL(window.location.href);
+
+        url.searchParams.set(
+          "berita",
+          slug
+        );
+
+        history.pushState(
+          { article: slug },
+          "",
+          url
+        );
+      }
+
+      showArticleView();
+
+      elements.articleTopbarTitle.textContent =
+        "Memuat berita...";
+
+      elements.articleContent.innerHTML =
+        createArticleLoading();
+
+      setLoading(
+        true,
+        "Memuat berita lengkap"
+      );
+
+      try {
+        let article =
+          state.articleCache.get(slug);
+
+        if (!article) {
+          const rawArticle =
+            await requestApi(
+              "getBeritaDetail",
+              { slug: slug }
+            );
+
+          article =
+            normalizeNews(rawArticle);
+
+          state.articleCache.set(
+            slug,
+            article
+          );
+        }
+
+        state.activeArticle =
+          article;
+
+        renderArticle(article);
+
+      } catch (error) {
+        console.error(error);
+
+        renderArticleError(
+          error.message ||
+          "Berita belum dapat dimuat."
+        );
+
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    function closeArticle(pushHistory) {
+      if (pushHistory) {
+        const url =
+          new URL(window.location.href);
+
+        url.searchParams.delete(
+          "berita"
+        );
+
+        history.pushState(
+          {},
+          "",
+          url.pathname +
+          url.search +
+          url.hash
+        );
+      }
+
+      document.title =
+        "KKN Desa Sirnabaya 2026 | UBP Karawang";
+
+      showHome();
+    }
+
+    function showArticleView() {
+      elements.articleView.hidden = false;
+      elements.footer.hidden = true;
+
+      document.body.classList.add(
+        "is-article-open"
+      );
+
+      elements.articleView.scrollTop = 0;
+    }
+
+    function showHome() {
+      elements.articleView.hidden = true;
+      elements.footer.hidden = false;
+
+      document.body.classList.remove(
+        "is-article-open"
+      );
+
+      state.activeArticle = null;
+    }
+
+    function renderArticle(article) {
+      document.title =
+        article.title +
+        " | KKN Desa Sirnabaya 2026";
+
+      elements.articleTopbarTitle.textContent =
+        article.title;
+
+      const authors =
+        article.members.length > 0
+          ? article.members
+              .map(createAuthorCard)
+              .join("")
+          : `
+              <p
+                style="
+                  margin: 0;
+                  color: var(--ink-muted);
+                  font-size: 0.8rem;
+                "
+              >
+                Data mahasiswa pelaksana belum tersedia.
+              </p>
+            `;
+
+      const mediaSection =
+        article.media.length > 0
+          ? createArticleMedia(
+              article.media
+            )
+          : "";
+
+      elements.articleContent.innerHTML = `
+        <article>
+          <header class="article-header">
+            <div class="shell article-header-inner">
+
+              <span class="article-category">
+                Berita Program Kerja
+              </span>
+
+              <h1 class="article-title">
+                ${escapeHtml(article.title)}
+              </h1>
+
+              <div class="article-meta">
+                <span>
+                  ${escapeHtml(
+                    article.dateLabel ||
+                    "Tanggal belum tersedia"
+                  )}
+                </span>
+
+                <span>
+                  ${escapeHtml(
+                    article.location ||
+                    "Desa Sirnabaya"
+                  )}
+                </span>
+
+                <span>
+                  ${article.members.length}
+                  mahasiswa pelaksana
+                </span>
+              </div>
+            </div>
+          </header>
+
+          <div class="shell article-cover-shell">
+            <div class="article-cover">
+              ${createCover(
+                article.cover,
+                article.title
+              )}
+            </div>
+          </div>
+
+          <div class="shell article-layout">
+
+            <div class="article-content">
+              ${contentToParagraphs(
+                article.content
+              )}
+            </div>
+
+            <aside class="article-sidebar">
+              <div class="sidebar-card">
+
+                <p class="sidebar-label">
+                  Mahasiswa Pelaksana
+                </p>
+
+                <div class="article-authors">
+                  ${authors}
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          ${mediaSection}
+
+          <section class="article-end">
+            <div class="shell">
+
+              <p
+                class="eyebrow"
+                style="justify-content: center;"
+              >
+                <span>Portal Berita KKN</span>
+                Desa Sirnabaya 2026
+              </p>
+
+              <h2>
+                Lanjut membaca cerita lainnya.
+              </h2>
+
+              <button
+                class="button button-primary"
+                type="button"
+                onclick="closeArticle(true)"
+              >
+                Kembali ke daftar berita
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </section>
+        </article>
+      `;
+
+      elements.articleView.scrollTop = 0;
+    }
+
+    function createAuthorCard(member) {
+      const photoUrl =
+        member.photo &&
+        (
+          member.photo.thumbnailUrl ||
+          member.photo.url
+        );
+
+      const description = [
+        member.studyProgram,
+        member.division
+      ]
+        .filter(Boolean)
+        .join(" · ");
+
+      return `
+        <div class="author-card">
+
+          <div class="author-portrait">
+            <span>
+              ${escapeHtml(
+                getInitials(member.name)
+              )}
+            </span>
+
+            ${
+              photoUrl
+                ? `
+                  <img
+                    src="${escapeAttribute(photoUrl)}"
+                    alt="Portrait ${escapeAttribute(member.name)}"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.remove()"
+                  >
+                `
+                : ""
+            }
+          </div>
+
+          <div class="author-info">
+            <strong>
+              ${escapeHtml(member.name)}
+            </strong>
+
+            ${
+              description
+                ? `
+                  <span>
+                    ${escapeHtml(description)}
+                  </span>
+                `
+                : ""
+            }
+
+            ${
+              member.nim
+                ? `
+                  <span>
+                    ${escapeHtml(member.nim)}
+                  </span>
+                `
+                : ""
+            }
+          </div>
+        </div>
+      `;
+    }
+
+    function createArticleMedia(media) {
+      return `
+        <section class="article-media-section">
+          <div class="shell">
+
+            <p class="eyebrow">
+              <span>Dokumentasi Kegiatan</span>
+              Foto dan video
+            </p>
+
+            <h2 class="section-title">
+              Rekaman proses di lapangan.
+            </h2>
+
+            <div class="article-media-grid">
+              ${
+                media
+                  .map(createMediaItem)
+                  .join("")
+              }
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    function createMediaItem(media) {
+      const type =
+        media.type === "video"
+          ? "video"
+          : "foto";
+
+      const orientation =
+        [
+          "portrait",
+          "landscape",
+          "square",
+          "auto"
+        ].includes(media.orientation)
+          ? media.orientation
+          : "auto";
+
+      const caption =
+        media.caption ||
+        media.name ||
+        "Dokumentasi kegiatan";
+
+      let frame;
+
+      if (type === "video") {
+        const videoUrl =
+          media.previewUrl ||
+          media.url;
+
+        frame = videoUrl
+          ? `
+              <iframe
+                src="${escapeAttribute(videoUrl)}"
+                title="${escapeAttribute(caption)}"
+                loading="lazy"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+              ></iframe>
+            `
+          : `
+              <div class="cover-placeholder">
+                <span style="color: white;">
+                  Video belum tersedia
+                </span>
+              </div>
+            `;
+
+      } else {
+        const imageUrl =
+          media.thumbnailUrl ||
+          media.url;
+
+        frame = imageUrl
+          ? `
+              <img
+                src="${escapeAttribute(imageUrl)}"
+                alt="${escapeAttribute(caption)}"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              >
+            `
+          : `
+              <div class="cover-placeholder">
+                <img
+                  src="${LOGO_KKN}"
+                  alt=""
+                >
+              </div>
+            `;
+      }
+
+      return `
+        <figure
+          class="media-item is-${escapeAttribute(orientation)}"
+        >
+          <div class="media-frame">
+            ${frame}
+          </div>
+
+          <figcaption class="media-caption">
+            ${escapeHtml(caption)}
+          </figcaption>
+        </figure>
+      `;
+    }
+
+    function renderArticleError(message) {
+      elements.articleTopbarTitle.textContent =
+        "Berita tidak dapat dimuat";
+
+      elements.articleContent.innerHTML = `
+        <div
+          class="shell"
+          style="padding: 80px 0;"
+        >
+          <div class="state-card">
+            <div class="state-icon">!</div>
+
+            <h3>Berita belum dapat dibuka</h3>
+
+            <p>
+              ${escapeHtml(message)}
+            </p>
+
+            <button
+              class="button button-primary"
+              type="button"
+              onclick="closeArticle(true)"
+            >
+              Kembali ke beranda
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function createArticleLoading() {
+      return `
+        <div
+          class="shell"
+          style="padding: 80px 0;"
+        >
+          <div class="state-card">
+            <div class="spinner"></div>
+
+            <h3>Memuat berita lengkap</h3>
+
+            <p>
+              Mengambil isi artikel dan dokumentasi dari Google Drive.
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
+    async function shareActiveArticle() {
+      if (!state.activeArticle) {
+        return;
+      }
+
+      const shareData = {
+        title:
+          state.activeArticle.title,
+
+        text:
+          state.activeArticle.summary ||
+          "Berita KKN Desa Sirnabaya 2026",
+
+        url:
+          window.location.href
+      };
+
+      try {
+        if (navigator.share) {
+          await navigator.share(
+            shareData
+          );
+
+          return;
+        }
+
+        await navigator.clipboard.writeText(
+          shareData.url
+        );
+
+        showToast(
+          "Tautan berita berhasil disalin."
+        );
+
+      } catch (error) {
+        if (
+          error &&
+          error.name === "AbortError"
+        ) {
+          return;
+        }
+
+        showToast(
+          "Tautan belum dapat dibagikan."
+        );
+      }
+    }
+
+    function toggleMobileMenu() {
+      const isOpen =
+        !elements.mobileNav.hidden;
+
+      if (isOpen) {
+        closeMobileMenu();
+
+      } else {
+        elements.mobileNav.hidden = false;
+
+        elements.menuButton.classList.add(
+          "is-active"
+        );
+
+        elements.menuButton.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+        document.body.classList.add(
+          "is-menu-open"
+        );
+      }
+    }
+
+    function closeMobileMenu() {
+      elements.mobileNav.hidden = true;
+
+      elements.menuButton.classList.remove(
+        "is-active"
+      );
+
+      elements.menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      document.body.classList.remove(
+        "is-menu-open"
+      );
+    }
+
+    function setLoading(
+      loading,
+      label
+    ) {
+      elements.loadingOverlay.hidden =
+        !loading;
+
+      if (
+        loading &&
+        label
+      ) {
+        const strong =
+          elements.loadingOverlay.querySelector(
+            "strong"
+          );
+
+        if (strong) {
+          strong.textContent = label;
+        }
+      }
+    }
+
+    function showError(message) {
+      elements.featuredNews.innerHTML = "";
+      elements.newsGrid.innerHTML = "";
+
+      elements.emptyNews.hidden = true;
+      elements.newsError.hidden = false;
+
+      elements.newsErrorMessage.textContent =
+        message;
+    }
+
+    function hideError() {
+      elements.newsError.hidden = true;
+    }
+
+    let toastTimeout;
+
+    function showToast(message) {
+      window.clearTimeout(
+        toastTimeout
+      );
+
+      elements.toast.textContent =
+        message;
+
+      elements.toast.classList.add(
+        "is-visible"
+      );
+
+      toastTimeout =
+        window.setTimeout(
+          function () {
+            elements.toast.classList.remove(
+              "is-visible"
+            );
+          },
+          2800
+        );
+    }
+
+    function cleanText(value) {
+      if (
+        value === undefined ||
+        value === null
+      ) {
+        return "";
+      }
+
+      return String(value)
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function slugify(value) {
+      return String(value || "")
+        .normalize("NFD")
+        .replace(
+          /[\u0300-\u036f]/g,
+          ""
+        )
+        .toLowerCase()
+        .replace(
+          /[^a-z0-9]+/g,
+          "-"
+        )
+        .replace(
+          /^-+|-+$/g,
+          ""
+        )
+        .replace(
+          /-{2,}/g,
+          "-"
+        );
+    }
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function escapeAttribute(value) {
+      return escapeHtml(value);
+    }
+
+    function excerpt(
+      value,
+      maximumLength
+    ) {
+      const text =
+        cleanText(value);
+
+      if (
+        text.length <= maximumLength
+      ) {
+        return text;
+      }
+
+      const shortened =
+        text.slice(
+          0,
+          maximumLength
+        );
+
+      const lastSpace =
+        shortened.lastIndexOf(" ");
+
+      return (
+        shortened.slice(
+          0,
+          lastSpace > 0
+            ? lastSpace
+            : maximumLength
+        ) +
+        "…"
+      );
+    }
+
+    function contentToParagraphs(content) {
+      const text =
+        String(content || "")
+          .replace(/\r\n/g, "\n")
+          .replace(/\r/g, "\n")
+          .trim();
+
+      if (!text) {
+        return `
+          <p>
+            Isi berita belum tersedia.
+          </p>
+        `;
+      }
+
+      let blocks =
+        text.split(/\n\s*\n+/);
+
+      if (blocks.length === 1) {
+        blocks =
+          text.split(/\n+/);
+      }
+
+      return blocks
+        .map(
+          function (block) {
+            const safe =
+              escapeHtml(
+                block.trim()
+              )
+                .replace(
+                  /\n/g,
+                  "<br>"
+                );
+
+            return safe
+              ? `<p>${safe}</p>`
+              : "";
+          }
+        )
+        .join("");
+    }
+
+    function getInitials(name) {
+      const words =
+        cleanText(name)
+          .split(" ")
+          .filter(Boolean);
+
+      if (words.length === 0) {
+        return "KKN";
+      }
+
+      if (words.length === 1) {
+        return words[0]
+          .slice(0, 2)
+          .toUpperCase();
+      }
+
+      return (
+        words[0][0] +
+        words[words.length - 1][0]
+      ).toUpperCase();
+    }
+
+    function getFirstName(name) {
+      const words =
+        cleanText(name)
+          .split(" ")
+          .filter(Boolean);
+
+      if (words.length === 0) {
+        return "Mahasiswa";
+      }
+
+      return words[0]
+        .charAt(0)
+        .toUpperCase() +
+        words[0]
+          .slice(1)
+          .toLowerCase();
+    }
+
+    function formatDateIndonesia(value) {
+      if (!value) {
+        return "";
+      }
+
+      const match =
+        String(value).match(
+          /^(\d{4})-(\d{2})-(\d{2})$/
+        );
+
+      if (!match) {
+        return String(value);
+      }
+
+      const months = [
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember"
+      ];
+
+      const year =
+        match[1];
+
+      const month =
+        Number(match[2]);
+
+      const date =
+        Number(match[3]);
+
+      return (
+        date +
+        " " +
+        months[month - 1] +
+        " " +
+        year
+      );
+    }
+  </script>
+</body>
+</html>

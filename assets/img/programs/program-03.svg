@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#427259"/>
+<circle cx="960" cy="150" r="210" fill="#f3c991" opacity=".92"/>
+<path d="M0 690 270 440l175 145 250-280 505 385v110H0Z" fill="#fcfaf3" opacity=".17"/>
+<path d="M0 770 350 530l190 155 275-210 385 210v115H0Z" fill="#0d2a22" opacity=".38"/>
+<g fill="none" stroke="#fcfaf3" stroke-width="3" opacity=".4">
+<circle cx="920" cy="490" r="170"/><circle cx="920" cy="490" r="120"/><circle cx="920" cy="490" r="65"/>
+</g>
+<text x="78" y="118" fill="#fcfaf3" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="7">KKN SIRNABAYA 2026</text>
+<text x="78" y="620" fill="#fcfaf3" font-family="Georgia,serif" font-size="86" font-weight="700">EDUKASI 3R</text>
+<text x="82" y="680" fill="#fcfaf3" font-family="Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="8">BERSAMA</text>
+<text x="1090" y="735" text-anchor="end" fill="#fcfaf3" font-family="Arial,sans-serif" font-size="20" opacity=".8">03</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+<rect width="800" height="1000" fill="#315f4b"/>
+<circle cx="600" cy="190" r="160" fill="#e1b63f" opacity=".9"/>
+<path d="M80 1000c30-260 155-410 320-410s290 150 320 410Z" fill="#0d2a22" opacity=".72"/>
+<circle cx="400" cy="385" r="172" fill="#f0c7a5"/>
+<path d="M240 365c12-155 86-240 184-240 112 0 179 85 166 233-61-38-111-96-142-162-30 85-103 151-208 169Z" fill="#172c25"/>
+<path d="M282 612c41 55 195 59 237 0l67 388H218Z" fill="#f3efe2"/>
+<path d="M335 574c27 19 102 19 130 0v93c-35 33-96 32-130 0Z" fill="#e7b58f"/>
+<text x="55" y="85" fill="#fcfaf3" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="6">SIRNABAYA 2026</text>
+<text x="745" y="930" text-anchor="end" fill="#fcfaf3" font-family="Georgia,serif" font-size="86" font-weight="700" opacity=".9">FA</text>
+</svg>

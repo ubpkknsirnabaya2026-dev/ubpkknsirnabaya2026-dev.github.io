@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+<rect width="800" height="1000" fill="#7b4e38"/>
+<circle cx="624" cy="220" r="144" fill="#aac2ae" opacity=".88"/>
+<path d="M0 780 192 500 344 680 512 370 800 700V1000H0Z" fill="#fcfaf3" opacity=".18"/>
+<path d="M0 900 216 650 400 820 600 590 800 780V1000H0Z" fill="#0d2a22" opacity=".42"/>
+<text x="48" y="90" fill="#fcfaf3" font-family="Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="5">KKN DESA SIRNABAYA</text>
+<text x="48" y="880" fill="#fcfaf3" font-family="Georgia,serif" font-size="60" font-weight="700">ANAK-ANAK</text>
+<text x="744" y="930" text-anchor="end" fill="#fcfaf3" font-family="Arial,sans-serif" font-size="20">07</text>
+</svg>
