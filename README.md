@@ -1,64 +1,59 @@
-# Portal KKN Desa Sirnabaya 2026
+<div align="center">
 
-Tahap 2: desain halaman utama statis untuk GitHub Pages.
+<img src="assets/img/logo-kkn-sirnabaya-2026.png" alt="Logo KKN Desa Sirnabaya 2026" width="150">
 
-## Struktur
+# Portal Berita KKN Desa Sirnabaya 2026
 
-- `index.html` — halaman utama portal.
-- `assets/css/style.css` — seluruh tampilan dan responsivitas.
-- `assets/js/config.js` — konfigurasi API Apps Script.
-- `assets/js/mock-data.js` — data demo sebelum database disambungkan.
-- `assets/js/main.js` — render program, anggota, galeri, filter, dan navigasi.
-- `assets/img/` — aset placeholder yang nantinya dapat diganti foto asli.
+**Universitas Buana Perjuangan Karawang**
 
-## Menjalankan
+Portal berita dan dokumentasi program kerja KKN Desa Sirnabaya 2026 yang terhubung dengan Google Spreadsheet, Google Drive, dan Google Apps Script.
 
-Buka `index.html` langsung atau jalankan server lokal:
+[Website Utama](https://ubpkknsirnabaya2026-dev.github.io/) · [Portal Dusun Kalihurip](https://ubpkknsirnabaya2026-dev.github.io/dusunkalihurip-desasirnabaya/) · [Instagram](https://www.instagram.com/kknsirnabaya26/) · [TikTok](https://www.tiktok.com/@kk.desa.sirnabaya5)
 
-```bash
-python -m http.server 8000
-```
+</div>
 
-Kemudian buka `http://localhost:8000`.
+---
 
-## Upload ke GitHub Pages
+## Tentang Website
 
-Salin seluruh isi folder ini ke repository:
+Website ini menjadi pusat publikasi kegiatan KKN Desa Sirnabaya 2026. Setiap program kerja ditampilkan dalam bentuk artikel berita yang memuat:
+
+- Judul dan narasi kegiatan
+- Tanggal serta lokasi pelaksanaan
+- Foto sampul berita
+- Nama dan portrait mahasiswa pelaksana
+- Dokumentasi foto dan video
+- Tautan menuju Portal Dusun Kalihurip
+
+Konten berita tidak ditulis langsung di dalam HTML. Data diambil secara dinamis dari Google Spreadsheet dan Google Drive melalui Google Apps Script.
+
+---
+
+## Teknologi
+
+| Bagian | Teknologi |
+|---|---|
+| Hosting frontend | GitHub Pages |
+| Tampilan website | HTML, CSS, JavaScript |
+| Backend API | Google Apps Script |
+| Database konten | Google Spreadsheet |
+| Penyimpanan media | Google Drive |
+
+---
+
+## Arsitektur Sistem
 
 ```text
-ubpkknsirnabaya2026-dev.github.io
-```
-
-Pastikan `index.html` berada tepat di root repository, bukan di dalam folder tambahan.
-
-## Tahap Apps Script nanti
-
-Pada `assets/js/config.js`:
-
-```js
-USE_MOCK_DATA: false,
-API_URL: "URL_WEB_APP_APPS_SCRIPT"
-```
-
-Endpoint awal yang diharapkan:
-
-```text
-?action=getHome
-```
-
-Format respons:
-
-```json
-{
-  "success": true,
-  "data": {
-    "programs": [],
-    "members": [],
-    "gallery": []
-  }
-}
-```
-
-## Catatan
-
-Nama anggota selain Faisal masih placeholder. Tautan halaman detail berita dan profil juga sudah disiapkan, tetapi file halaman detail akan dibuat pada tahap lanjutan.
+GitHub Pages
+     │
+     │ Fetch JSON
+     ▼
+Google Apps Script
+     │
+     ├── Google Spreadsheet
+     │   ├── Anggota
+     │   └── Berita
+     │
+     └── Google Drive
+         ├── Portrait anggota
+         └── Dokumentasi berita
