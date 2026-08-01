@@ -8,7 +8,7 @@
 
 Portal berita dan dokumentasi program kerja KKN Desa Sirnabaya 2026 yang terhubung dengan Google Spreadsheet, Google Drive, dan Google Apps Script.
 
-[Website Utama](https://ubpkknsirnabaya2026-dev.github.io/) · [Portal Dusun Kalihurip](https://ubpkknsirnabaya2026-dev.github.io/dusunkalihurip-desasirnabaya/) · [Instagram](https://www.instagram.com/kknsirnabaya26/) · [TikTok](https://www.tiktok.com/@kk.desa.sirnabaya5)
+[Website Utama](https://ubpkknsirnabaya2026-dev.github.io/) · [Portal Dusun Kalihurip](https://ubpkknsirnabaya2026-dev.github.io/dusunkalihurip-desasirnabaya/) · [Instagram](https://www.instagram.com/kknsirnabaya26/) · [TikTok](https://www.tiktok.com/@kkn.desa.sirnabaya5)
 
 </div>
 
